@@ -34,7 +34,7 @@ $(document).ready(function () {
         ctx = canvas.getContext("2d");
         ctx.fillStyle = "#A0A0A0";
         ctx.strokeStyle = "#FFFFFF";
-        var val = $("#opciones").val()
+        var val = $("#opciones").val();
         $("#centro").addClass("hide");
         $("#tablero").removeClass("hide");
         var gb = new ApagaLuces(parseInt(val));
