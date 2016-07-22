@@ -27,6 +27,11 @@
     </div>
     <div class="row medium-8 large-12 columns text-center hide" id="tablero">
        <div class="row">
+           <div class="medium-8 large-6 column text-center">
+               <button id="reload" class="hollow button danger hide">Reiniciar</button>
+           </div>
+       </div>
+       <div class="row">
            <div class="medium-8 large-3 large-offset-3 column">
                <div class="callout primary">
                    Clicks: <span id="click">0</span>
@@ -84,7 +89,7 @@
                 <button id="otroTab" class="hollow button danger">Elegir otro tablero</button>
             </div>
         </div>
-        <button class="close-button" data-close aria-label="Close modal" type="button">
+        <button id="btnEnd" class="close-button" data-close aria-label="Close modal" type="button">
             <span aria-hidden="true">&times;</span>
         </button>
     </div>
@@ -93,5 +98,6 @@
             <footer>Realizado por: Cesar Hernandez Antonio - 9ITI1</footer>
         </div>
     </div>
+    <audio id="sound" src="src/aplauso.mp3"></audio>
 </body>
 </html>

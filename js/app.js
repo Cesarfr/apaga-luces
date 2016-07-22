@@ -2,6 +2,7 @@ $(document).ready(function () {
     var popStart = new Foundation.Reveal($('#initModal'));
     var popInst = new Foundation.Reveal($('#insModal'));
     var popEnd = new Foundation.Reveal($('#endGame'));
+    var sound = document.getElementById("sound");
     var canvas, ctx, jsTimer, game, val;
     var time = 0;
     var measureTime = 0;
@@ -21,6 +22,14 @@ $(document).ready(function () {
     
     $("#inicio").click(function () {
         popStart.open();
+    });
+    
+    $("#reload").click(function () {
+        location.reload();
+    });
+    
+    $("#btnEnd").click(function () {
+        $("#reload").removeClass("hide");
     });
     
     $("#inst").click(function () {
@@ -158,6 +167,7 @@ $(document).ready(function () {
         }
         $("#endTime").html(time);
         $("#endClicks").html(this.moveCount);
+        sound.play();
         popEnd.open();
         canvas.removeEventListener("click", clickHandler);
         measureTime = 0;
