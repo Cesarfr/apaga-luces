@@ -27,7 +27,7 @@
     </div>
     <div class="row medium-8 large-12 columns text-center hide" id="tablero">
        <div class="row">
-           <div class="medium-8 large-6 column text-center">
+           <div class="medium-8 large-12 column text-center">
                <button id="reload" class="hollow button danger hide">Reiniciar</button>
            </div>
        </div>
@@ -69,10 +69,12 @@
     <div class="reveal" id="insModal" data-reveal>
         <div class="row">
             <div class="medium-12 column text-center">
-               <br><br>
+              <h1>Instrucciones</h1><br>
                 <p>El juego consiste en apagar cada una de las luces del tablero, tomando en cuenta que cada luz adyancente hacia arriba, abajo, izquierda o derecha sera encendida o apagada según su estado.</p>
-                <img src="src/img.png" alt="game" class="thumbnail">
+                <img id="imgFoco" src="src/img.png" alt="game" class="thumbnail imgIns"><br>
                 <button id="ok" class="hollow button success">Entendido</button>
+                <button id="pinst" class="hollow button alert">Escuchar instrucciones</button>
+                <audio id="audioInst" src="src/robot.mp3"></audio>
             </div>
         </div>
         <button class="close-button" data-close aria-label="Close modal" type="button">
@@ -84,7 +86,7 @@
             <div class="medium-12 column text-center">
                <br><br>
                 <h1>¡ Felicidades !</h1>
-                <p>¡¡ Has terminado este tablero en <span id="endTime"></span> segundos y en tan sólo <span id="endClicks"></span> clicks!!</p>
+                <p>¡¡ Has terminado este tablero en <span id="endTime"></span> segundos y en tan sólo <span id="endClicks"></span> clicks !!</p>
                 <button id="restart" class="hollow button success">Jugar otra vez</button>
                 <button id="otroTab" class="hollow button danger">Elegir otro tablero</button>
             </div>

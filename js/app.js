@@ -3,6 +3,7 @@ $(document).ready(function () {
     var popInst = new Foundation.Reveal($('#insModal'));
     var popEnd = new Foundation.Reveal($('#endGame'));
     var sound = document.getElementById("sound");
+    var au = document.getElementById("audioInst");
     var canvas, ctx, jsTimer, game, val;
     var time = 0;
     var measureTime = 0;
@@ -66,6 +67,16 @@ $(document).ready(function () {
     
     $("#ok").click(function () {
         popInst.close();
+		$("#imgFoco").attr('src', 'src/img.png');
+    });
+    
+    $("#pinst").click(function () {
+        $("#imgFoco").attr('src', 'src/foco.gif');
+		au.play();
+		au.addEventListener("ended", function() {
+            au.currentTime = 0;
+            $("#imgFoco").attr('src', 'src/static.gif');
+        });
     });
     
     
